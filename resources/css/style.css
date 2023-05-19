@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 375px;
+  max-width: 1440px;
+  margin: auto;
+}
+
+body {
+  width: 90%;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  background-image: url(/resources/images/bg-pattern-top-mobile.svg),
+    url(/resources/images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 70vw top 90vh, right 30vw bottom 150vh;
+}
+
+.text h1 {
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 2rem 0rem 1rem 0rem;
+  /*!important - top 0 bottom 0*/
+}
+
+.text p {
+  font-weight: 500;
+  color: var(--Dark-Grayish-Magenta);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+/****************************MOBILE VERSION**********************************/
+.ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rate-1,
+.rate-2,
+.rate-3 {
+  background-color: var(--Light-Grayish-Magenta);
+  margin: 1rem 0;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  border-radius: 1.5rem;
+}
+
+.ratings h2 {
+  color: var(--Very-Dark-Magenta);
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
+
+/*******************************************************************/
+/* parent container*/
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* children container*/
+.review-one,
+.review-two,
+.review-three {
+  background-color: var(--Very-Dark-Magenta);
+  color: var(--Light-Grayish-Magenta);
+  margin: 1rem 0;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: start;
+  line-height: 1.5;
+}
+
+/* image position*/
+.profile img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-right: 1rem;
+  float: left;
+}
+
+.profile span {
+  color: var(--Soft-Pink);
+  font-weight: 300;
+  padding-top: 0.4rem;
+}
+
+.profile h3 {
+  text-align: start;
+  font-size: 0.9;
+  color: var(--Light-Grayish-Magenta);
+}
+
+.profile p {
+  text-align: start;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url(/resources/images/bg-pattern-top-desktop.svg),
+      url(/resources/images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+  }
+
+  .text h1 {
+    font-size: 3.5rem;
+    text-align: start;
+  }
+
+  .text p {
+    text-align: start;
+    font-size: 1.1rem;
+  }
+
+  /************************DESKTOP VERSION**********************************/
+
+  /* parents element"*/
+  .ratings {
+    display: grid;
+    width: 100%;
+  }
+
+  /* first integrated element parent*/
+  .rating {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30em;
+    margin: 0.5em;
+  }
+
+  /* second integrated element child*/
+  .stars {
+    display: flex;
+    max-width: 85px;
+    float: left;
+    align-items: center;
+  }
+
+  .rate-1 {
+    justify-self: start;
+  }
+
+  .rate-2 {
+    justify-self: center;
+  }
+
+  .rate-3 {
+    justify-self: end;
+  }
+
+  /*******************************************************************/
+
+  /*IMPORTANT */
+  .reviews {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/3;
+    gap: 2rem;
+  }
+
+  .review-one,
+  .review-two,
+  .review-three {
+    padding: 2em;
+    height: 18em;
+  }
+
+  .reviews .review-one {
+    align-self: top;
+  }
+
+  .reviews .review-two {
+    align-self: center;
+    margin-top: 4rem;
+  }
+
+  .reviews .review-three {
+    align-self: end;
+    margin-top: 6rem;
+  }
+
+  .attribution {
+    display: flex;
+    flex-direction: row;
+  }
+}
