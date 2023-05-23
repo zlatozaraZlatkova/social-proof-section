@@ -18,9 +18,7 @@ Thanks for checking out this front-end coding challenge.
 - [Author](#author)
 
 ## Overview
-My first project.
-
-
+This project tests layout skills and provides a nice challenge!
 
 ### Links
 
